@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Slab:wght@200&family=Antic+Slab&family=Forum&family=Life+Savers:wght@400;700&family=Abhaya+Libre:wght@800&family=Anonymous+Pro:wght@400;700&family=Aoboshi+One&family=Cormorant+Garamond:wght@400;500&family=Crimson+Text&family=EB+Garamond:wght@800&family=Encode+Sans+Expanded&family=Gotu&family=Libre+Bodoni:wght@700&family=Red+Rose:wght@300;400;500;600;700&family=Reem+Kufi+Ink&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+
+}
+
+
+
+.rose {
+  font-family: 'Red Rose';
+}
+
+.forum{
+  font-family: 'Forum', serif;
+}
+
+.jose{
+  font-family: 'Josefin Slab', serif;
+}
+
+.abril{
+  font-family: 'Abril Fatface', serif;
+}
+
+.gotu{
+  font-family: 'Gotu', sans-serif;
+}
+.life{
+  font-family: 'Life Savers', serif;
+  /* letter-spacing: 0.1rem; */
+}
+
+.antics{
+  font-family: 'Antic Slab', serif;
+}
+.anonymous {
+  font-family: 'Anonymous Pro', monospace
+}
+
+.aoboshi {
+  font-family: 'Aoboshi One', serif;
+
+}
+
+
+.abhaya {
+  font-family: 'Abhaya Libre', serif;
+  font-family: 800;
+}
+
+.heading {
+  line-height: 140%;
+  letter-spacing: -2px;
+}
+
+.cormogara {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.crimson {
+  font-family: 'Crimson Text', serif;
+}
+
+.ebgara {
+  font-family: 'EB Garamond', serif;
+  font-weight: 800;
+}
+
+.encodesans {
+  font-family: 'Encode Sans Expanded', sans-serif;
+
+}
+
+.bodoni {
+  font-family: 'Libre Bodoni', serif;
+}
+
+.reem {
+  font-family: 'Reem Kufi Ink', sans-serif;
+}
+
+.source {
+  font-family: 'Source Serif 4', serif;
+}
+
+.button {
+  border: 0.25px white solid;
+padding: 6px;
+  border-radius: 0.3rem;
+  color: white;
+  box-shadow: 4px 4px 0.5px rgba(180, 180, 180, 0.45);
+
+}
+.target {
+  font-kerning: none;
+}
+
+.circle{
+
+  right: 0px; 
+}
+
+.colorline {
+  background: linear-gradient(to bottom,
+      rgb(255, 0, 0) -5%,
+
+      rgb(255, 174, 0) 50%,
+      /* Transition from red to blue at 75% */
+      rgb(255, 0, 0) 105%
+      /* Complete the gradient with blue at 100% */
+    );
+
+    background: linear-gradient(to bottom , #9e00ff,#0094ff );
+}
+
+.timelinestopover{
+  margin-top: 4.5rem;
+}
+.glow {
+  box-shadow:
+    inset 0 0 5px #fff,
+    /* inner white */
+
+    0 0 5px #fff,
+    /* outer white */
+    -1px 0 8px #f0f,
+    /* outer left magenta */
+    1px 0 8px #0ff;
+}
+
+
+.funnel {
+  margin-top: -2rem;
+}
+
+
+.step {
+
+  max-width: 12rem;
+  min-width: 12rem;
+  margin-bottom: 0.5rem;
+  transform: translateY(1rem) translateX(-4rem);
+}
+
+
+.steps{
+  margin-bottom: 0.5rem;
+  transform: translateY(1rem) translateX(-4rem);
+  
+}
+
+.steps-outers {
+  margin-left: 35%;
+  position: absolute;
+}
+
+.cf {
+  margin-top: -8rem;
+}
+
+.cf1 {
+  margin-top: -6rem;
+}
+
+.cf2 {
+  margin-left: -2rem;
+}
+
+.t1 {
+  margin-top: 0rem;
+
+}
+
+.t2 {
+  margin-top: -8rem;
+}
+
+.t3 {
+  margin-top: -4.5rem;
+}
+
+#scroller1 {
+  width: max-content;
+ 
+}
+
+#scroller2 {
+  width: max-content;
+}
+
+
+.scroller-container {
+ 
+  mask: linear-gradient(90deg, transparent, rgb(0, 0, 0 ) 18%, rgb(0, 0, 0) 82%, transparent);
+}
+
+.gallery-container{
+
+  width: 90%;
+  box-shadow: 0rem 0rem 0.5rem rgba(119, 0, 255, 0.318);
+  border-radius: 0.35rem;
+  background-color: white;
+}
+
+.gallery-heading-container{
+  box-shadow: 0rem 0rem 0.5rem rgba(119, 0, 255, 0.318);
+  border-radius: 0.35rem;
+  background-color: white;
+}
+
+.wire{
+  z-index: -1;
+}
+
+.h-960{
+  height: fit-content;
+}
+.parent {
+  height: fit-content;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  grid-auto-rows: 1fr; /* Equal height rows */
+}
+
+
+li{
+  background-image: url('/blue-tick.svg');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 3rem;
+  list-style-type: none;
+}
+
+ul.feature li {
+  background-image: url('/white-tick.svg');
+}
+
+.bg-custom-image li{
+  background-image: none;
+}
+
+.gradientblue{
+  background: linear-gradient(32deg , #0095ff, #9e00ff99);
+  
+  box-shadow: 0px 2px 4px rgb(255, 255, 255,0.34);
+}
+
+.w-95{
+  width: 95%;
+}
+
+@layer utilities{.black-wire{
+  background: url('/black-wire.svg');
+  background-position: center;
+  background-repeat: repeat-y;
+
+}
+
+.black-wire-lg{
+  background: url('/black-wire-lg.svg');
+  background-position: center;
+  background-repeat: repeat-y;
+
+}
+}
+.white-wire{
+  background: url('/white-wire.svg');
+  background-position: center;
+}
+
+.shadow{
+  text-shadow: 1px 2px 5px  black;
+}
+
+.reviews-box{
+  height: 203px;
+  width: 360px;
+  background: url('/reviews-box.svg');
+  background-repeat: no-repeat;
+}
+
+.review-text{
+  color: gray;
+  /* margin-top: -3%;
+  margin-left: 20%; */
+  height: 5rem;
+  
+}
+
+.review-photo{
+  /* margin-top: 34%; */
+  padding: 0.1rem;
+  /* margin-left: -80%; */
+  overflow: hidden;
+  transform: translateY(1rem);
+ 
+}
+
+.client-name{
+  /* width: 8rem; */
+/* margin-top: 30.5%;
+margin-left: -25%; */
+color: gray;
+text-align: start;
+}
+
+.client-role{
+  color: gray;
+}
+
+
+.client-business{
+  /* width: 10rem; */
+  
+  /* margin-top: 38.5%;
+  margin-left: 31%; */
+  text-align: right;
+ 
+}
+
+.w-96p{
+width: 96%;
+}
+
+@layer utilities{
+  .w-m{
+    width: 22rem;
+    height: 13rem;
+  }
+  .w-t{
+    width: 36rem;
+    height: 24rem;
+  }
+  .w-lg{
+    width: 48rem;
+    height: 16rem;
+  }
+
+  
+}
+
+
+.bluee-text{
+  /* color: linear-gradient(143deg,);
+  background: -webkit-linear-gradient(32deg, #0094ff, #9e00ff);
+  -webkit-background-clip: text;
+  background-clip:text ;
+  -webkit-text-fill-color: transparent;
+  color:transparent; */
+  color:#6600ff;
+}
+@layer utilities{
+
+.blue-text{
+  
+  background: -webkit-linear-gradient(32deg, #0094ff, #9e00ff);
+  -webkit-background-clip: text;
+  background-clip:text ;
+  -webkit-text-fill-color: transparent;
+  color:transparent; 
+  
+}
+}
+
+
+.bg-blue-voilet{
+  background:linear-gradient(32deg, #0094ff, #9e00ff); ;
+}
+
+.target{
+  font-kerning: none;
+}
+
+/* styles/SplashScreen.module.css */
+
+
+.splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000; /* Set your preferred background color */
+
+  
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+  z-index: 300;
+}
+
+.splashHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.feature-h{
+  height: 72rem;
+}
+
+
+.feature-h-lg{
+  height: 32rem;
+}
+.feature-h-lgg{
+  height: 39.5rem;
+}
+
+.w-main{
+  width: 69%;
+}
+
+.w-desc{
+  width: 31%;
+} 
+
+/* Example CSS for customizing scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9E00FF;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0094FF;
+
+}
+
+.circularFrame {
+  width: 125px; /* Adjust as needed */
+  height: 125px; /* Adjust as needed */
+  border-radius: 50%; /* This creates a circular shape */
+  overflow: hidden; /* Hide any content outside the circular frame */
+  border: 4px solid white;
+}
+
+.circularImage {
+  width: 100%; /* Ensure the image fills the circular frame */
+  height: 100%; /* Ensure the image fills the circular frame */
+  object-fit: cover; /* Preserve aspect ratio while filling the circular frame */
+}
