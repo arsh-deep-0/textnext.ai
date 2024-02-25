@@ -20,8 +20,8 @@ const questionSchema = new Schema(
         type:String,
     }],
     roles:[{
-        type: Schema.Types.ObjectId,
-        ref: "Role"
+        type: String,
+        
     }]
   },
   { timestamps: true }
