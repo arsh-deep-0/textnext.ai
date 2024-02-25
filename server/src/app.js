@@ -24,7 +24,8 @@ app.post("/calculate-bert-score", (req, res) => {
 
   console.log(data);
 
-  
+
+
   // Spawn a Python subprocess
   const pythonProcess = spawn("python", [
     "bert.py",
@@ -63,6 +64,8 @@ console.log(JSON.stringify(data.correct_answers));
 
 //routes import
 //import userRouter from './routes/user.routes.js'
+import questionRouter from './routes/question.routes.js'
+app.use("",questionRouter)
 
 //routes declaration
 
