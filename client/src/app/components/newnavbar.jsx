@@ -7,7 +7,7 @@ import { MdEmail } from 'react-icons/md';
 import { BiMenu } from 'react-icons/bi';
 import { ImCross } from 'react-icons/im';
 import SocialMediaModal from './SocialMediaModal'
-
+import Link from "next/link";
 import { FaSquareFacebook } from 'react-icons/fa6';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -153,14 +153,19 @@ function NewNavbar() {
     return (
         <>
             <div className='start  flex items-center justify-between px-4 py-6 mr-0 w-full'>
-                <div className='flex gap-1 items-center'>
+                <Link href='/'>  <div className='flex gap-1 items-center'>
                     <img src="logo.svg" alt="" />
                     <h1 className='text-black bodoni text-xl font-bold lg:text-2xl'><span className='blue-text'>Prep</span>Next</h1>
                 </div>
+                </Link>
+              
                 <div className='gap-12 hidden lg:flex mr-12'>
-                    <p className='gotu'onClick={scrollToPortfolio}>Progress</p> {/* Portfoilio*/}
-                    <p className='gotu'onClick={scrollToPricing}>Profile</p>{/*Pricing */}
-                    <p className='gotu'onClick={scrollToContact}>Contact us</p>
+                    <Link href='/report'> <p className='gotu'>Progress</p> </Link>
+                    {/* Portfoilio*/}
+                    <Link href='/profile'><p className='gotu'>Profile</p></Link>
+                    {/*Pricing */}
+                    <Link href='/'> <p className='gotu'>Contact us</p></Link>
+                   
                 </div>
                 <BiMenu className='flex md:hidden lg:hidden absolute right-8 mb-0 w-6 h-6' id='toggle-nav' onClick={showNavbar}>
                 </BiMenu>

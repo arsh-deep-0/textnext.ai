@@ -391,7 +391,10 @@ width: 96%;
   
 }
 }
-
+.hidekar{
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
 
 .bg-blue-voilet{
   background:linear-gradient(32deg, #0094ff, #9e00ff); ;

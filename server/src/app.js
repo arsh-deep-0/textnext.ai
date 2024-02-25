@@ -3,7 +3,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import { spawn } from "child_process";
 import { ApiResponse } from "./utils/ApiResponse.js";
-
+//import bodyParser from 'body-parser';
 const app = express();
 
 app.use(
@@ -17,10 +17,12 @@ app.use(express.json({ limit: "16kb" }));
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(express.static("public"));
 app.use(cookieParser());
+//app.use(bodyParser.urlencoded({extended:false}));
 
 app.post("/calculate-bert-score", (req, res) => {
-  const data = req.body;
-  console.log(req.body);
+  let data = req.body;
+
+  console.log(data);
 
   
   // Spawn a Python subprocess
