@@ -1,13 +1,15 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-
+import Camera from  '../components/camera'
 export default function Page() {
-  const [selectedOption, setSelectedOption] = useState(""); 
+  const [selectedOption, setSelectedOption] = useState("BackEnd"); 
   const [name, setName] = useState("");
   useEffect(() => {
     //console.log("Selected option changed:", selectedOption);
   }, [selectedOption]);
   let score = 0;
+const [question, setQuestion] = useState([]);
+  const [camera,setCamera] = useState(false);
   const addproduct = async()=>{
     console.log(name,selectedOption);
     clearInput();
@@ -50,7 +52,8 @@ export default function Page() {
           method: 'GET',
         });
         result = await result.json();
-         console.log(result);
+        setQuestion(result.data);
+          console.log(result.data);
         //  if(data.success===true ){
         //      console.log('succcessfully added the data');
              
@@ -60,21 +63,31 @@ export default function Page() {
         //  }
        }
   return (
-    <div>
-      <div>
-      
-        <label htmlFor="options">Select an option:</label>
-        <select id="options" name="options" value={selectedOption} onChange ={(e)=>setSelectedOption(e.target.value)} className="input-field">
-          <option value="BackEnd">BackEnd</option>
+    <>
+    {!camera && <div className='white-wire items-center'>
+      <div className='w-[80%] gradientblue m-6 rounded-md'>
+      <div className='m-4 p-4 flex-col '>
+        <div>
+        <label className='font-semibold p-4' htmlFor="options">Select an option:</label>
+        <select id="options" name="options" value={selectedOption} onChange ={(e)=>setSelectedOption(e.target.value)} className=" p-2 rounded-sm font-bold  input-field">
+          <option className='p-2 rounded-sm' value="BackEnd">BackEnd</option>
           <option value="FrontEnd">FrontEnd</option>
           
         </select>
+        </div>
 
-       <button className="btn " onClick={getAnswer} > get question </button>
-
-      <input type="text" value={name} onChange ={(e)=>setName(e.target.value)} placeholder="enter product name"   className="input-field"/>
-      <button className="btn " onClick={addproduct} > Add Product</button>
+      <div className='pl-10 mt-4' > <button className="btn p-2  bg-white rounded-md " onClick={getAnswer} > get question </button></div>
+       </div>
+      {/* <input type="text" value={name} onChange ={(e)=>setName(e.target.value)} placeholder="enter product name"   className="input-field"/>
+      <button className="btn " onClick={addproduct} > Add Product</button> */}
       </div>
-    </div>
+      <div className='pl-10 mt-4' > <button className="btn p-2  bg-white rounded-md " onClick={()=>setCamera(!camera)} > Let start  </button></div>
+      
+
+    </div>}
+
+{camera && <Camera question={question}/>}
+    </>
+
   )
 }
