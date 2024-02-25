@@ -60,6 +60,9 @@ console.log(JSON.stringify(data.correct_answers));
   
 });
 
+app.post("/speech-to-text",(req,res)=>{
+  
+})
 //routes import
 //import userRouter from './routes/user.routes.js'
 import questionRouter from './routes/question.routes.js'
